@@ -1,0 +1,54 @@
+.do-app { display: grid; grid-template-columns: 320px 1fr; gap: 20px; max-width: 1400px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif; color: #1a1a1a; }
+@media (max-width: 980px) { .do-app { grid-template-columns: 1fr; } }
+
+.do-panel { background: #f4f5f7; border: 1px solid #d3d5da; border-radius: 10px; padding: 18px; position: sticky; top: 20px; }
+.do-panel h2 { margin: 0 0 4px; font-size: 15px; text-transform: uppercase; color: #8b1e1e; }
+.do-panel .sub { margin: 0 0 16px; font-size: 12px; color: #6b6b6b; }
+.do-panel .field { margin-bottom: 12px; }
+.do-panel label { display: block; font-size: 11px; font-weight: bold; text-transform: uppercase; margin-bottom: 4px; color: #444; }
+.do-panel input, .do-panel select, .do-panel textarea { width: 100%; padding: 7px 8px; border: 1px solid #b9bcc4; border-radius: 5px; font-size: 13px; }
+.do-panel textarea { min-height: 60px; }
+.do-panel .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.do-panel hr { border: none; border-top: 1px solid #d3d5da; margin: 16px 0; }
+.do-panel .stat { display: flex; justify-content: space-between; font-size: 12.5px; padding: 4px 0; }
+.do-panel .stat b { color: #8b1e1e; }
+.do-panel .badge { display: inline-block; background: #e4ecff; color: #1c3f8f; font-size: 10px; font-weight: bold; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
+.do-panel .btns { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.do-panel button { cursor: pointer; border: none; border-radius: 6px; padding: 10px 12px; font-size: 13px; font-weight: bold; }
+.do-panel button.primary { background: #8b1e1e; color: #fff; }
+.do-panel button.secondary { background: #fff; color: #8b1e1e; border: 1px solid #8b1e1e; }
+.do-panel button:disabled { opacity: .5; cursor: not-allowed; }
+.do-panel .error { color: #b3261e; font-size: 12px; }
+.do-panel .success { color: #1e7d32; font-size: 12px; }
+.do-panel .hint { font-size: 11px; color: #6b6b6b; margin: -4px 0 12px; line-height: 1.4; }
+.do-panel .upload-field { border: 1px dashed #8b1e1e; border-radius: 6px; padding: 10px; background: #fff; }
+.do-panel .upload-field input[type="file"] { border: none; padding: 0; font-size: 12px; }
+
+.price-input { width: 84px; text-align: right; padding: 3px 5px; border: 1px solid #b9bcc4; border-radius: 4px; font-size: 11px; }
+
+.amount-summary { margin-top: 10px; margin-left: auto; width: 280px; font-size: 12.5px; }
+.amount-summary .row { display: flex; justify-content: space-between; padding: 4px 8px; }
+.amount-summary .row.total { font-weight: bold; font-size: 14px; background: #f6e9e9; border-top: 2px solid #8b1e1e; padding: 8px; margin-top: 4px; }
+
+.do-doc { background: #fff; border: 1px solid #c7c9cf; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,.08); padding: 28px 32px; }
+.do-doc .doc-top { display: flex; justify-content: space-between; }
+.do-doc .co-name { font-size: 20px; font-weight: bold; margin: 0; }
+.do-doc .co-addr { font-size: 11.5px; color: #333; margin: 2px 0; }
+.do-doc .do-title { font-size: 13px; font-weight: bold; text-align: right; }
+.do-doc .do-tin { font-size: 11px; text-align: right; }
+.do-doc .do-no { font-size: 16px; font-weight: bold; text-align: right; margin-top: 6px; }
+.do-doc .divider { border: none; border-top: 2px solid #0a0a0a; margin: 10px 0 14px; }
+.do-doc .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 10px; }
+.do-doc .party h3 { font-size: 12px; margin: 0 0 6px; text-decoration: underline; }
+.do-doc .party .name { font-size: 12.5px; font-weight: bold; }
+.do-doc .party .attn { margin-top: 8px; font-size: 12px; }
+.do-doc .meta-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; border-top: 1px solid #999; border-bottom: 1px solid #999; padding: 8px 0; margin: 14px 0; font-size: 12px; }
+.do-doc .meta-strip .label { font-weight: bold; text-transform: uppercase; font-size: 10.5px; color: #555; }
+.do-doc .desc-row { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px; }
+table.items { width: 100%; border-collapse: collapse; margin-top: 6px; }
+table.items th { background: #8b1e1e; color: #fff; font-size: 10.5px; padding: 6px 4px; border: 1px solid #8b1e1e; }
+table.items td { border: 1px solid #ccc; font-size: 11px; padding: 4px; text-align: center; white-space: nowrap; }
+table.items tfoot td { font-weight: bold; background: #f6e9e9; border-top: 2px solid #8b1e1e; }
+.sign-grid { display: grid; grid-template-columns: repeat(4,1fr) 1.3fr; gap: 14px; margin-top: 34px; font-size: 11px; }
+.sign-grid div { border-top: 1px solid #333; padding-top: 4px; text-align: center; }
+.footer-strip { display: flex; justify-content: space-between; margin-top: 26px; font-size: 10px; color: #555; border-top: 1px solid #ccc; padding-top: 6px; }

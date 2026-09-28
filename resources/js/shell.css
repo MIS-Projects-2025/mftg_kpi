@@ -1,0 +1,108 @@
+:root{
+  --tf-navy:#0f172a;
+  --tf-navy-2:#16213a;
+  --tf-slate:#475467;
+  --tf-slate-light:#667085;
+  --tf-border:#e4e7ec;
+  --tf-bg:#f8fafc;
+  --tf-accent:#8b1e1e;
+  --tf-accent-soft:#fbeaea;
+  --tf-green:#12793f;
+  --tf-green-soft:#e6f4ea;
+  --tf-amber:#b25e09;
+  --tf-amber-soft:#fdf0dd;
+  --tf-red:#b3261e;
+  --tf-red-soft:#fbeaea;
+  --tf-white:#ffffff;
+}
+
+*{box-sizing:border-box;}
+body{margin:0; font-family:'Segoe UI', Arial, Helvetica, sans-serif; background:var(--tf-bg); color:#101828;}
+
+.shell{display:grid; grid-template-columns:248px 1fr; min-height:100vh;}
+
+/* ---- sidebar ---- */
+.shell-sidebar{
+  background:var(--tf-navy); color:#fff;
+  display:flex; flex-direction:column;
+  padding:20px 14px;
+  position:sticky; top:0; height:100vh;
+}
+.brand{display:flex; align-items:center; gap:10px; padding:6px 8px 22px;}
+.brand-mark{
+  width:34px; height:34px; border-radius:8px; background:var(--tf-accent);
+  display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:16px;
+}
+.brand-name{font-weight:bold; font-size:14px; letter-spacing:.04em;}
+.brand-sub{font-size:10.5px; color:#94a3b8;}
+
+.shell-nav{display:flex; flex-direction:column; gap:2px; flex:1;}
+.nav-item{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:7px;
+  color:#cbd5e1; text-decoration:none; font-size:13px;
+}
+.nav-item:hover{background:rgba(255,255,255,.06); color:#fff;}
+.nav-item.active{background:var(--tf-accent); color:#fff;}
+.nav-icon{font-size:14px; width:18px; text-align:center;}
+
+.shell-sidebar-footer{border-top:1px solid rgba(255,255,255,.1); padding-top:14px; margin-top:14px;}
+.env-badge{
+  display:inline-block; background:rgba(255,255,255,.08); color:#a7f3d0;
+  font-size:9.5px; font-weight:bold; letter-spacing:.06em; padding:3px 8px; border-radius:10px;
+}
+.footer-meta{font-size:10.5px; color:#64748b; margin-top:8px;}
+
+/* ---- main ---- */
+.shell-main{display:flex; flex-direction:column; min-width:0;}
+.shell-topbar{
+  background:#fff; border-bottom:1px solid var(--tf-border);
+  padding:18px 28px; display:flex; align-items:center; justify-content:space-between;
+  position:sticky; top:0; z-index:5;
+}
+.shell-topbar h1{margin:0; font-size:19px; font-weight:700; letter-spacing:-.01em;}
+.shell-topbar p{margin:3px 0 0; font-size:12.5px; color:var(--tf-slate-light);}
+.topbar-right{display:flex; align-items:center; gap:10px;}
+
+.shell-content{padding:24px 28px; flex:1;}
+
+/* ---- shared enterprise widgets ---- */
+.card{background:#fff; border:1px solid var(--tf-border); border-radius:10px;}
+.card-pad{padding:18px;}
+
+.filter-bar{
+  display:flex; align-items:flex-end; gap:14px; flex-wrap:wrap;
+  background:#fff; border:1px solid var(--tf-border); border-radius:10px;
+  padding:14px 16px; margin-bottom:20px;
+}
+.filter-field{display:flex; flex-direction:column; gap:5px;}
+.filter-field label{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--tf-slate-light);}
+.filter-field select, .filter-field input{
+  padding:7px 10px; border:1px solid var(--tf-border); border-radius:6px; font-size:13px; min-width:140px;
+}
+
+.badge{
+  display:inline-flex; align-items:center; gap:5px;
+  font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px;
+}
+.badge-green{background:var(--tf-green-soft); color:var(--tf-green);}
+.badge-amber{background:var(--tf-amber-soft); color:var(--tf-amber);}
+.badge-red{background:var(--tf-red-soft); color:var(--tf-red);}
+.badge-gray{background:#f1f3f6; color:#667085;}
+
+.btn{
+  border:none; border-radius:7px; padding:9px 14px; font-size:13px; font-weight:600;
+  cursor:pointer; font-family:inherit;
+}
+.btn-primary{background:var(--tf-accent); color:#fff;}
+.btn-primary:hover{background:#701818;}
+.btn-outline{background:#fff; color:var(--tf-accent); border:1px solid var(--tf-accent);}
+.btn-outline:hover{background:var(--tf-accent-soft);}
+
+table.enterprise-table{width:100%; border-collapse:collapse; font-size:13px;}
+table.enterprise-table thead th{
+  text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.03em;
+  color:var(--tf-slate-light); padding:10px 12px; border-bottom:1px solid var(--tf-border);
+}
+table.enterprise-table tbody td{padding:11px 12px; border-bottom:1px solid #f0f1f4;}
+table.enterprise-table tbody tr:hover{background:#fafbfc;}

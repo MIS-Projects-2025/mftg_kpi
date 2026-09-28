@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@plugin "daisyui" {
+    themes:
+        light --default,
+        dark --prefersdark;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 239 40% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 239 40% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 239 40% 10%;
+
+        /* PRIMARY → Indigo (Tailwind-like indigo-500) */
+        --primary: 239 84% 67%;
+        --primary-foreground: 0 0% 98%;
+
+        /* Sky / soft UI surfaces */
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 239 40% 20%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 239 20% 45%;
+        --accent: 210 40% 94%;
+        --accent-foreground: 239 40% 20%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 239 84% 67%;
+
+        --chart-1: 239 84% 67%;
+        --chart-2: 221 83% 53%;
+        --chart-3: 210 40% 96%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 239 30% 6%;
+        --foreground: 0 0% 98%;
+        --card: 239 30% 8%;
+        --card-foreground: 0 0% 98%;
+        --popover: 239 30% 8%;
+        --popover-foreground: 0 0% 98%;
+
+        /* Dark indigo primary */
+        --primary: 239 70% 60%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 239 25% 14%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 239 20% 14%;
+        --muted-foreground: 239 10% 63%;
+        --accent: 239 25% 14%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 239 20% 18%;
+        --input: 239 20% 18%;
+        --ring: 239 70% 60%;
+
+        --chart-1: 239 70% 60%;
+        --chart-2: 221 83% 53%;
+        --chart-3: 210 40% 96%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: "Poppins", sans-serif;
+    }
+}
